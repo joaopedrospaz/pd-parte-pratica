@@ -67,5 +67,5 @@ def send_email(personal_email):
         driver.find_element(By.CSS_SELECTOR, ".T-I.J-J5-Ji.aoO.v7.T-I-atl.L3").click()
 
 
-send_email("joaopsp79@gmail.com")
+send_email("email_de_alguem")
 driver.quit()
