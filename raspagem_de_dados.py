@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 
-driver = webdriver.Chrome()
+driver = webdriver.Firefox()
 
 
 def get_bitcoin_price():
@@ -22,9 +22,7 @@ def get_bitcoin_price():
 def send_email(personal_email):
     price = get_bitcoin_price()
     if price > 300:
-        driver.get(
-            "https://www.google.com/webhp?hl=pt-BR&ictx=2&sa=X&ved=0ahUKEwiO8IvbueCHAxXXGbkGHZhUPX4QPQgK"
-        )
+        driver.get("https://www.google.com.br/?hl=pt-BR")
         time.sleep(2)
 
         search_input = driver.find_element(By.CLASS_NAME, "gLFyf")
@@ -69,5 +67,5 @@ def send_email(personal_email):
         driver.find_element(By.CSS_SELECTOR, ".T-I.J-J5-Ji.aoO.v7.T-I-atl.L3").click()
 
 
-send_email("email_desejado")
+send_email("joaopsp79@gmail.com")
 driver.quit()
